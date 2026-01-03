@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="عمد للاستشارات الهندسية - مكتب هندسي رائد في التصميم المعماري والإنشائي. نقدم حلولاً هندسية مبتكرة وعصرية.">
+    <title>عمد للاستشارات الهندسية | إبداع معماري ورؤية عصرية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="home.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+</head>
+
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <span class="logo-text">عمد <span class="logo-sub">للاستشارات الهندسية</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> خدماتنا</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> أعمالنا</a></li>
+                <li><a href="#about"><i class="fas fa-users"></i> فريقنا</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comments"></i> آراء العملاء</a></li>
+                <li><a href="#blog"><i class="fas fa-blog"></i> المدونة</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i> تواصل معنا</a></li>
+                <li class="nav-buttons">
+                    <button class="style-toggle" id="styleToggle" title="تبديل النمط">
+                        <i class="fas fa-palette"></i>
+                        <span class="style-text">كلاسيكي</span>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle" title="وضع الليلي">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القائمة الجانبية للجووال -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="#" class="logo">عمد <span>للاستشارات</span></a>
+            <button class="mobile-close"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="#services"><i class="fas fa-cogs"></i> خدماتنا</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> أعمالنا</a></li>
+            <li><a href="#about"><i class="fas fa-users"></i> فريقنا</a></li>
+            <li><a href="#testimonials"><i class="fas fa-comments"></i> آراء العملاء</a></li>
+            <li><a href="#blog"><i class="fas fa-blog"></i> المدونة</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i> تواصل معنا</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <button class="style-toggle" id="mobileStyleToggle">
+                <i class="fas fa-palette"></i>
+                <span>تبديل النمط</span>
+            </button>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+                <span>الوضع الليلي</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header id="home" class="hero">
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1">
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="reveal">رؤية معمارية <span class="highlight">تتحدى</span> الزمن</h1>
+                            <p class="reveal">نحوّل الأحلام إلى واقع ملموس بدقة هندسية وإبداع لا حدود له</p>
+                            <div class="hero-btns reveal">
+                                <a href="#projects" class="btn btn-primary">استكشاف المشاريع <i
+                                        class="fas fa-arrow-left"></i></a>
+                                <a href="#contact" class="btn btn-secondary">طلب استشارة مجانية</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide-2">
+                    <div class="slide-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="reveal">تصاميم <span class="highlight">ذكية</span> لمستقبل أفضل</h1>
+                            <p class="reveal">نبتكر حلولاً هندسية مستدامة تجمع بين الجمال والوظيفة</p>
+                            <div class="hero-btns reveal">
+                                <a href="#services" class="btn btn-primary">خدماتنا <i class="fas fa-cogs"></i></a>
+                                <a href="#contact" class="btn btn-secondary">تواصل معنا</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </header>
+
+    <!-- قسم الإحصائيات -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="stat-number" data-goal="750">0</h3>
+                    <p>مشروع مكتمل</p>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="stat-number" data-goal="18">0</h3>
+                    <p>سنة خبرة</p>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="stat-number" data-goal="35">0</h3>
+                    <p>مهندس خبير</p>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="stat-number" data-goal="120">0</h3>
+                    <p>عميل سعيد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">خدماتنا <span>المهنية</span></h2>
+                <p class="section-subtitle">نقدم مجموعة متكاملة من الخدمات الهندسية المتخصصة</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal" data-service="architectural">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>التصميم المعماري</h3>
+                    <p>تصميمات معمارية مبتكرة تجمع بين الجمال والوظيفة والاستدامة</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="service-card reveal" data-service="structural">
+                    <div class="service-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>الاستشارات الإنشائية</h3>
+                    <p>حلول إنشائية متكاملة تضمن سلامة المباني وديمومتها</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="service-card reveal" data-service="interior">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>التصميم الداخلي</h3>
+                    <p>تصميمات داخلية راقية تعكس شخصية العميل وتوظف المساحات بكفاءة</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="service-card reveal" data-service="sustainability">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>الاستدامة والطاقة</h3>
+                    <p>حلول مستدامة وموفرة للطاقة تحافظ على البيئة وتقلل التكاليف</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="service-card reveal" data-service="supervision">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>الإشراف على التنفيذ</h3>
+                    <p>إشراف هندسي متكامل لضمان جودة التنفيذ ومطابقة التصميم</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="service-card reveal" data-service="feasibility">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>دراسات الجدوى</h3>
+                    <p>دراسات متكاملة لتقييم المشاريع وضمان جدواها الاقتصادية</p>
+                    <a href="#" class="service-link">تفاصيل الخدمة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">معرض <span>أعمالنا</span></h2>
+                <p class="section-subtitle">إبداعاتنا الهندسية التي تجسد التميز والاحترافية</p>
+            </div>
+
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">جميع المشاريع</button>
+                <button class="filter-btn" data-filter="villas">تصميم فلل</button>
+                <button class="filter-btn" data-filter="towers">الأبراج التجارية</button>
+                <button class="filter-btn" data-filter="interior">التصميم الداخلي</button>
+                <button class="filter-btn" data-filter="heritage">العمارة التراثية</button>
+                <button class="filter-btn" data-filter="sustainable">المشاريع المستدامة</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- مشروع 1 -->
+                <div class="project-card reveal" data-category="villas" data-modal="project1">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="فيلا حديثة">
+                        <div class="project-overlay">
+                            <span class="project-category">تصميم فلل</span>
+                            <h3>فيلا العليا الحديثة</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>فيلا العليا الحديثة</h3>
+                        <p>تصميم فيلا عصرية بمساحة 850 م² تجمع بين الخصوصية والحداثة</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الرياض</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div class="project-card reveal" data-category="towers" data-modal="project2">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="برج تجاري">
+                        <div class="project-overlay">
+                            <span class="project-category">الأبراج التجارية</span>
+                            <h3>برج الأعمال العالمي</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>برج الأعمال العالمي</h3>
+                        <p>برج تجاري مكون من 40 طابق بتقنيات ذكية متطورة</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> جدة</span>
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 3 -->
+                <div class="project-card reveal" data-category="interior" data-modal="project3">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="تصميم داخلي">
+                        <div class="project-overlay">
+                            <span class="project-category">التصميم الداخلي</span>
+                            <h3>فندق الفيصلية الفاخر</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>فندق الفيصلية الفاخر</h3>
+                        <p>تصميم داخلي فاخر لفندق 5 نجوم بطابع عصري أنيق</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الرياض</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 4 -->
+                <div class="project-card reveal" data-category="heritage" data-modal="project4">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="عمارة تراثية">
+                        <div class="project-overlay">
+                            <span class="project-category">العمارة التراثية</span>
+                            <h3>قصر التراث النجدي</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>قصر التراث النجدي</h3>
+                        <p>ترميم وتجديد قصر تراثي مع الحفاظ على الطابع المعماري الأصلي</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الدرعية</span>
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 5 -->
+                <div class="project-card reveal" data-category="sustainable" data-modal="project5">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="مشروع مستدام">
+                        <div class="project-overlay">
+                            <span class="project-category">المشاريع المستدامة</span>
+                            <h3>المجمع السكني الأخضر</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>المجمع السكني الأخضر</h3>
+                        <p>مجمع سكني صديق للبيئة يعتمد على الطاقة الشمسية</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الخبر</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 6 -->
+                <div class="project-card reveal" data-category="villas" data-modal="project6">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="فيلا كلاسيكية">
+                        <div class="project-overlay">
+                            <span class="project-category">تصميم فلل</span>
+                            <h3>فيلا الواحة الكلاسيكية</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>فيلا الواحة الكلاسيكية</h3>
+                        <p>فيلا فاخرة بتصميم كلاسيكي عصري بمساحة 1200 م²</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الدمام</span>
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal">
+                <a href="#" class="btn btn-secondary">عرض جميع المشاريع <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم فريق العمل -->
+    <section id="about" class="section team-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">فريقنا <span>المتميز</span></h2>
+                <p class="section-subtitle">خبراء ومهندسون مبدعون يجسدون التميز في كل مشروع</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="المهندس الرئيسي">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>م. أحمد العتيبي</h3>
+                        <span class="member-role">المدير التنفيذي</span>
+                        <p>خبرة 20 سنة في التصميم المعماري والإنشائي، حاصل على جوائز عالمية</p>
+                    </div>
+                </div>
+
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="المهندس الإنشائي">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>م. مهيب الشراعي</h3>
+                        <span class="member-role">رئيس المهندسين الإنشائيين</span>
+                        <p>متخصص في التصميم الإنشائي للمباني العالية والمشاريع الكبرى</p>
+                    </div>
+                </div>
+
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="مصممة داخلية">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>م. سارة القحطاني</h3>
+                        <span class="member-role">رئيسة مصممي الديكور</span>
+                        <p>حاصلة على جوائز في التصميم الداخلي الفاخر، خبرة 15 سنة</p>
+                    </div>
+                </div>
+
+                <div class="team-member reveal">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="مهندس استدامة">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>م. خالد المنصور</h3>
+                        <span class="member-role">مدير الاستدامة</span>
+                        <p>خبير في أنظمة المباني الخضراء والطاقة المتجددة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم آراء العملاء -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">آراء <span>العملاء</span></h2>
+                <p class="section-subtitle">ما يقوله عملاؤنا عن جودة خدماتنا</p>
+            </div>
+
+            <div class="testimonials-slider swiper reveal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <p>"تعاملنا مع مكتب عمد كان تجربة رائعة. الدقة في التنفيذ والاهتمام بالتفاصيل تجاوز
+                                توقعاتنا. أنصح الجميع بالتعامل معهم."</p>
+                            <div class="client-info">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+                                    alt="العميل">
+                                <div>
+                                    <h4>عبدالله الشمري</h4>
+                                    <span>مشروع فيلا العليا</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <p>"المهنية والإبداع هما ما يميز هذا المكتب. التصاميم التي قدمها فريقهم كانت مبتكرة وعملية
+                                في نفس الوقت."</p>
+                            <div class="client-info">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+                                    alt="العميلة">
+                                <div>
+                                    <h4>نورة العتيبي</h4>
+                                    <span>مشروع تصميم داخلي</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <p>"فريق عمل ممتاز ومحترف. كانوا دائماً متواجدين للإجابة على استفساراتنا ومتابعة كل التفاصيل
+                                بدقة."</p>
+                            <div class="client-info">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+                                    alt="العميل">
+                                <div>
+                                    <h4>محمد الحارثي</h4>
+                                    <span>مشروع برج تجاري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المدونة -->
+    <section id="blog" class="section blog-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">أحدث <span>المقالات</span></h2>
+                <p class="section-subtitle">رؤى وأفكار من خبرائنا في الهندسة والمعمار</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="العمارة المستدامة">
+                        <div class="blog-date">15 مارس 2024</div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">الاستدامة</span>
+                        <h3><a href="#">مستقبل العمارة المستدامة في المملكة</a></h3>
+                        <p>كيف تسهم التقنيات الحديثة في خلق مباني أكثر استدامة وصديقة للبيئة.</p>
+                        <a href="#" class="blog-link">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="المباني الذكية">
+                        <div class="blog-date">10 فبراير 2024</div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">التكنولوجيا</span>
+                        <h3><a href="#">المباني الذكية: ثورة في عالم الهندسة</a></h3>
+                        <p>استكشاف أحدث التقنيات في أنظمة المباني الذكية وكيف تغير طريقة عيشنا.</p>
+                        <a href="#" class="blog-link">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="العمارة التراثية">
+                        <div class="blog-date">25 يناير 2024</div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">التراث</span>
+                        <h3><a href="#">إحياء العمارة التراثية بتقنيات حديثة</a></h3>
+                        <p>كيف نوفق بين الحفاظ على التراث المعماري واستخدام التقنيات الحديثة.</p>
+                        <a href="#" class="blog-link">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center reveal">
+                <a href="#" class="btn btn-secondary">عرض جميع المقالات <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">تواصل <span>معنا</span></h2>
+                <p class="section-subtitle">نحن هنا لتحويل أفكارك إلى واقع ملموس</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>هاتفنا</h3>
+                        <p dir="ltr">+967 772 112 703</p>
+                        <p dir="ltr">+967 776 158 797</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>hsamalshray86@gmail.com</p>
+                        <p>consult@emad-eng.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>العنوان</h3>
+                        <p>شارع الثلاثين، أمام قاعة برلنت<br>،محافظة إب، الجمهورية اليمنية</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>ساعات العمل</h3>
+                        <p>السبت - الخميس: 9 صباحاً - 9 مساءً</p>
+                        <p>الجمعة : مغلق</p>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal">
+                    <h3>أرسل لنا رسالة</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>نوع الخدمة</option>
+                                <option value="architectural">تصميم معماري</option>
+                                <option value="structural">استشارات إنشائية</option>
+                                <option value="interior">تصميم داخلي</option>
+                                <option value="other">خدمات أخرى</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea placeholder="رسالتك أو تفاصيل المشروع" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="file-upload">
+                            <input type="file" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+                            <span><i class="fas fa-paperclip"></i> إرفاق ملفات (اختياري)</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+
+            <div class="map-container reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.183966678181!2d44.169843799999995!3d13.9476493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161ceb0053dfa779%3A0xabdad6b8fe14433a!2z2YXZg9iq2Kgg2LnZhdivINmE2YTYo9iz2KrYtNin2LHYp9iqINin2YTZh9mG2K_Ys9mK2Kkg2YjYp9mE2KrYt9mI2YrYsSDYp9mE2LnZgtin2LHZig!5e0!3m2!1sar!2s!4v1767445719151!5m2!1sar!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-drafting-compass"></i>
+                        <span>عمد <span>للاستشارات الهندسية</span></span>
+                    </a>
+                    <p class="footer-about">مكتب هندسي رائد يقدم حلولاً تصميمية وإنشائية مبتكرة تلبي تطلعات عملائنا
+                        وتواكب رؤية الجمهورية 2030.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-left"></i> أعمالنا</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-left"></i> فريقنا</a></li>
+                        <li><a href="#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> التصميم المعماري</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> الاستشارات الإنشائية</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> التصميم الداخلي</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> الاستدامة والطاقة</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> الإشراف على التنفيذ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>النشرة الإخبارية</h3>
+                    <p>اشترك في نشرتنا الإخبارية لتصلك آخر أخبارنا وعروضنا</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2024 عمد للاستشارات الهندسية</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">خريطة الموقع</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <a href="https://wa.me/967772112703" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>تواصل عبر واتساب</span>
+    </a>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- مودال المشروع -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <!-- سيتم ملؤه بالسكريبت -->
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال الخدمات -->
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <button class="service-modal-close"><i class="fas fa-times"></i></button>
+            <div class="service-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- مكتبة Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ملف الجافاسكريبت -->
+    <script src="main.js"></script>
+</body>
+
+</html>
