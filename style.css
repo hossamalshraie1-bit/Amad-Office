@@ -244,15 +244,15 @@
     }
 
     .slide-1 {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('https://c.pxhere.com/photos/a4/96/world_trade_center_new_york_manhattan_nyc_usa_new_york_city_ground_zero_skyscraper-856853.jpg!d');
         background-size: cover;
         background-position: center;
     }
 
     .slide-2 {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('https://c.pxhere.com/photos/a0/72/architecture_blue_skies_building_buildings_business_city_clouds_contemporary-994758.jpg!d');
         background-size: cover;
         background-position: center;
     }
@@ -268,7 +268,7 @@
     }
 
     .hero-content {
-        position: relative;
+        position: absolute;
         z-index: 2;
         color: white;
         height: 100%;
@@ -276,6 +276,8 @@
         flex-direction: column;
         justify-content: center;
         max-width: 800px;
+        text-align: center;
+        margin-right: 10%;
     }
 
     .hero-content h1 {
@@ -298,7 +300,9 @@
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
-    }
+        /* justify-items: flex-end; */
+        justify-content:center;
+        margin-top: 190px;    }
 
     /* قسم الإحصائيات */
     .stats-section {
