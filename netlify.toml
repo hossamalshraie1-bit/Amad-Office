@@ -1,0 +1,7 @@
+[build]
+  command = "echo 'No build command'"
+  publish = "/"
+
+[functions]
+  external_node_modules = ["decap-cms-app"]
+  node_bundler = "esbuild"
