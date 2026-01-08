@@ -9,7 +9,7 @@
     // ==   1. كود جلب المشاريع الديناميكية                          ==
     // =================================================================
     const projectsGrid = document.querySelector('.projects-grid');
-
+    initializeProjectFeatures(); // تهيئة ميزات المشاريع
     if (projectsGrid) {
         fetch('/_data/projects.json')
             .then(response => {
@@ -468,6 +468,7 @@
                         // تشغيل عداد الإحصائيات عندما يكون القسم مرئيًا
                         if (element.closest('.stats-section')) {
                             animateStats();
+                            initializeProjectFeatures();
                         }
                     }
                 });
@@ -539,129 +540,163 @@
 
 
     // =================================================================
-    // ==   دالة جديدة لتشغيل ميزات المشاريع بعد تحميلها            ==
-    // =================================================================
-    function initializeProjectFeatures() {
-        
-       // فلترة المشاريع
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
+// ==   دالة جديدة لتشغيل ميزات المشاريع بعد تحميلها            ==
+// =================================================================
+function initializeProjectFeatures() {
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    // إزالة النشاط من جميع الأزرار
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // إضافة النشاط للزر المحدد
-                    this.classList.add('active');
-
-                    const filterValue = this.getAttribute('data-filter');
-
-                    projectCards.forEach(card => {
-                        const category = card.getAttribute('data-category');
-
-                        if (filterValue === 'all' || filterValue === category) {
-                            card.style.display = 'block';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 10);
-                        } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-        
-        // (يمكنك إضافة أي كود آخر يعتمد على projectCards هنا)
-
-                    // مودال المشاريع
-            const projectModal = document.getElementById('projectModal');
-            const modalContent = document.querySelector('.modal-body');
-            const modalClose = document.querySelector('.modal-close');
-
-            projectCards.forEach(card => {
-                card.addEventListener('click', function () {
-                    const projectId = this.getAttribute('data-modal');
-                    const projectTitle = this.querySelector('h3').textContent;
-                    const projectDesc = this.querySelector('p').textContent;
-                    const projectImage = this.querySelector('img').src;
-                    const projectCategory = this.querySelector('.project-category').textContent;
-                    const projectLocation = this.querySelectorAll('.project-meta span')[0].textContent;
-                    const projectDate = this.querySelectorAll('.project-meta span')[1].textContent;
-
-                    modalContent.innerHTML = `
-                <div class="project-modal-details">
-                    <div class="modal-image">
-                        <img src="${projectImage}" alt="${projectTitle}">
-                    </div>
-                    <div class="modal-info">
-                        <span class="modal-category">${projectCategory}</span>
-                        <h2>${projectTitle}</h2>
-                        <p>${projectDesc}</p>
-                        
-                        <div class="modal-meta">
-                            <div class="meta-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <span>الموقع</span>
-                                    <strong>${projectLocation}</strong>
-                                </div>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-calendar"></i>
-                                <div>
-                                    <span>سنة الإنجاز</span>
-                                    <strong>${projectDate}</strong>
-                                </div>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-ruler-combined"></i>
-                                <div>
-                                    <span>المساحة</span>
-                                    <strong>850 م²</strong>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-description">
-                            <h3>تفاصيل المشروع</h3>
-                            <p>هذا المشروع يمثل إنجازًا هندسيًا بارزًا يجمع بين الجمال والوظيفة. تم تنفيذه بأعلى معايير الجودة والكفاءة، مع الاهتمام بكل التفاصيل الدقيقة لضمان رضا العميل وتحقيق الرؤية التصميمية.</p>
-                            <ul>
-                                <li>تصميم معماري مبتكر</li>
-                                <li>مواد بناء عالية الجودة</li>
-                                <li>أنظمة طاقة مستدامة</li>
-                                <li>تصميم داخلي متكامل</li>
-                                <li>إشراف هندسي متواصل</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="modal-actions">
-                            <a href="#contact" class="btn btn-primary">طلب خدمة مشابهة</a>
-                            <button class="btn btn-secondary modal-close-btn">إغلاق</button>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-                    projectModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-
-                    // إضافة مستمعي الأحداث للأزرار الجديدة
-                    document.querySelector('.modal-close-btn')?.addEventListener('click', closeModal);
-                });
-            });
-
-            function closeModal() {
-                projectModal.classList.remove('active');
-                document.body.style.overflow = '';
+    // 1. تعريف دالة التصفية (لتعمل عند النقر وعند التحميل)
+    const filterProjects = (filterValue) => {
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            // التحقق هل نعرض الكارت أم نخفيه
+            if (filterValue === 'all' || filterValue === category) {
+                card.style.display = 'block';
+                // تأخير بسيط لتفعيل الأنيميشن
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
             }
-            modalClose.addEventListener('click', closeModal);
+        });
+    };
 
+    // 2. تفعيل التفاعل عند النقر على الأزرار
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // إزالة النشاط من جميع الأزرار
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // إضافة النشاط للزر المحدد
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+            filterProjects(filterValue); // استدعاء دالة التصفية
+        });
+    });
+
+    // 3. 🔥 الحل السحري: تشغيل التصفية تلقائياً عند البداية 🔥
+    // نبحث عن الزر الذي يحمل كلاس active ونطبق الفلتر الخاص به فوراً
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn) {
+        filterProjects(activeBtn.getAttribute('data-filter'));
+    } else {
+        // لو لم نجد زر نشط، نعرض الكل احتياطياً
+        filterProjects('all'); 
     }
+
+    // =========================================================
+    // ==   كود النافذة المنبثقة (Modal) - كما هو             ==
+    // =========================================================
+    const projectModal = document.getElementById('projectModal');
+    const modalContent = document.querySelector('.modal-body');
+    const modalClose = document.querySelector('.modal-close');
+
+    if (projectModal && modalContent) { // تحقق بسيط لتجنب الأخطاء
+        projectCards.forEach(card => {
+            card.addEventListener('click', function () {
+                // جلب البيانات من الكارت
+                const projectId = this.getAttribute('data-modal');
+                // استخدام Optional Chaining (?) لتجنب الأخطاء لو العنصر غير موجود
+                const projectTitle = this.querySelector('h3')?.textContent || 'مشروع هندسي';
+                const projectDesc = this.querySelector('p')?.textContent || '';
+                const projectImage = this.querySelector('img')?.src || '';
+                // محاولة جلب الفئة والموقع (تعتمد على هيكل HTML الخاص بك)
+                const projectCategory = this.querySelector('.project-category')?.textContent || 'هندسة'; 
+                
+                // جلب تفاصيل الموقع والتاريخ بحذر
+                const metaSpans = this.querySelectorAll('.project-meta span');
+                const projectLocation = metaSpans[0]?.textContent || 'محافظة إب';
+                const projectDate = metaSpans[1]?.textContent || new Date().getFullYear();
+
+                modalContent.innerHTML = `
+                    <div class="project-modal-details">
+                        <div class="modal-image">
+                            <img src="${projectImage}" alt="${projectTitle}">
+                        </div>
+                        <div class="modal-info">
+                            <span class="modal-category">${projectCategory}</span>
+                            <h2>${projectTitle}</h2>
+                            <p>${projectDesc}</p>
+                            
+                            <div class="modal-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <span>الموقع</span>
+                                        <strong>${projectLocation}</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <div>
+                                        <span>سنة الإنجاز</span>
+                                        <strong>${projectDate}</strong>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <div>
+                                        <span>المساحة</span>
+                                        <strong>--- م²</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-description">
+                                <h3>تفاصيل المشروع</h3>
+                                <p>تم تنفيذ هذا المشروع وفقاً لأعلى المعايير الهندسية في مكتب عمد، حيث تم مراعاة الجانب الوظيفي والجمالي ليتناسب مع احتياجات العميل وطبيعة الموقع.</p>
+                                <ul>
+                                    <li>تصميم معماري وإنشائي متكامل</li>
+                                    <li>إشراف هندسي دقيق</li>
+                                    <li>التزام بالمخططات والمواصفات</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-actions">
+                                <a href="contact.html" class="btn btn-primary">اطلب تصميم مماثل</a>
+                                <button class="btn btn-secondary modal-close-btn">إغلاق</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                projectModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // تشغيل زر الإغلاق الداخلي (الذي تم إنشاؤه للتو)
+                const closeBtnInner = modalContent.querySelector('.modal-close-btn');
+                if(closeBtnInner) {
+                    closeBtnInner.addEventListener('click', closeModal);
+                }
+            });
+        });
+
+        function closeModal() {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        // إغلاق عند النقر خارج المودال
+        window.addEventListener('click', (e) => {
+            if (e.target == projectModal) {
+                closeModal();
+            }
+        });
+    }
+}
 
 
 }); // <-- هذا هو القوس الأخير الذي يغلق الملف
