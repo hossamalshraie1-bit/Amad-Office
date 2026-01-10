@@ -26,7 +26,7 @@ collections:
                 name: "category_slug"
                 widget: "select"
                 options:
-                - { label: "المباني السكنية", value: "residen-build" }
+                  - { label: "المباني السكنية", value: "residen-build" }
                   - { label: "تصميم فلل", value: "villas" }
                   - { label: "الأبراج التجارية", value: "towers" }
                   - { label: "التصميم الداخلي", value: "interior" }
