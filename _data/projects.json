@@ -84,7 +84,7 @@
       "title": "حدائق فلل",
       "image": "Images/uploads/9.png",
       "description": "تصميم حدائق خارجية",
-      "category_slug": "villas",
+      "category_slug": "other",
       "category_name": "حدائق الفلل",
       "location": "جدة",
       "year": 2023,
@@ -150,6 +150,66 @@
       "location": "إب",
       "year": 2025,
       "modal_id": "project15"
+    },
+    {
+      "title": "مجلس نساء",
+      "image": "Images/uploads/20.png",
+      "description": "(تصميم عصري لمجلس نساء بالطراز (الموديرن",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "الرياض",
+      "year": 2024,
+      "modal_id": "project16"
+    },
+    {
+      "title": "مجلس رجال",
+      "image": "Images/uploads/21.png",
+      "description": "تصميم عصري لمجلس رجال",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "الرياض",
+      "year": 2024,
+      "modal_id": "project17"
+    },
+    {
+      "title": "غرفة نوم ماستر",
+      "image": "Images/uploads/22.png",
+      "description": "غرفة نوم تصميم يجمع بين البساطة والجمال",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "الرياض",
+      "year": 2024,
+      "modal_id": "project18"
+    },
+    {
+      "title": "مطبخ",
+      "image": "Images/uploads/23.png",
+      "description": "تصميم مطابخ بتوزيعات مدروسة للاثاث طراز موديرن جذاب",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "جدة",
+      "year": 2025,
+      "modal_id": "project19"
+    },
+    {
+      "title": "صالة معيشة",
+      "image": "Images/uploads/25.png",
+      "description": "تصميم صالات معيشة ب- ستايل عصري حديث",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "الطائف",
+      "year": 2025,
+      "modal_id": "project20"
+    },
+    {
+      "title": "صالة افراح ومناسبات",
+      "image": "Images/uploads/27.png",
+      "description": "تصميم صالات للافراح والمناسبات بطراز موديرن",
+      "category_slug": "interior",
+      "category_name": "تصميم داخلي",
+      "location": "إب",
+      "year": 2025,
+      "modal_id": "project21"
     }
   ]
 }
